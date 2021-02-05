@@ -10,6 +10,7 @@ pip install Flask
 sudo mysql "da prides notr"
 pol pa tole enga pa po enga  copy paste notr 
 
+NOVA BAZA!!!
 CREATE  TABLE Person(
 id_person INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 ime VARCHAR(45) NOT NULL,
@@ -27,13 +28,11 @@ naslov VARCHAR(45) NOT NULL,
 tk_person INT NOT NULL
 );
 
-ALTER TABLE objava ADD CONSTRAINT tk_povezava1 FOREIGN KEY (tk_person) REFERENCES Person(id_person);
+ALTER TABLE Objava ADD CONSTRAINT tk_povezava1 FOREIGN KEY (tk_person) REFERENCES Person(id_person);
 
-CREATE TABLE friends(id_friends INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE Friends(id_friends INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 tk_person INT NOT NULL,
 tk_friend INT NOT NULL
 );
-ALTER TABLE friends ADD CONSTRAINT tk_povezava2 FOREIGN KEY (tk_person) REFERENCES Person(id_person);
-ALTER TABLE friends ADD CONSTRAINT tk_povezava3 FOREIGN KEY (tk_friend) REFERENCES Person(id_person);
-
-
+ALTER TABLE Friends ADD CONSTRAINT tk_povezava2 FOREIGN KEY (tk_person) REFERENCES Person(id_person);
+ALTER TABLE Friends ADD CONSTRAINT tk_povezava3 FOREIGN KEY (tk_friend) REFERENCES Person(id_person);
