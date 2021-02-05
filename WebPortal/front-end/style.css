@@ -1,0 +1,61 @@
+a{
+    color: white;
+}
+ul{
+    margin-left: 1000px;
+}
+li{
+    margin-left: 100px;
+}
+li a{
+    border: 2px solid transparent;
+}
+li a:hover{
+    border-bottom: 2px solid white;
+    transition: 1s;
+    color: white;
+}
+.show{
+    height: 50px;
+    background-color: rgba(240, 248, 255, 0.7);
+    transition: 2s ease;
+}
+.show li a{
+    color: black;
+}
+.show li a:hover{
+    transition: 1s;
+    color: black;
+    border-bottom: 2px solid black;
+}
+#brande{
+    margin-top: 10px;
+    background-color: red;
+    color: white;
+    padding:5px;
+    border-radius: 10px;
+}
+h5{
+    margin-left: 20px;
+}
+.veliknaslov{
+    position: absolute;
+    margin-left: 600px;
+    margin-top: -800px;
+}
+.veliknaslov h1{
+    font-size: 160px;
+    background-color: red;
+    color: white;
+    padding:5px;
+    width: 700px;
+    height: 200px;
+    border-radius: 10px;
+    text-align: center;
+}
+.veliknaslov h2{
+color: white;
+padding:5px;
+font-size: 120px;
+text-align: center;
+}

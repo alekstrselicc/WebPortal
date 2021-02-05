@@ -1,0 +1,47 @@
+{% extends 'index.html' %}
+
+
+{% block title %} home {% endblock title %}
+
+{% block content %}
+<h1 class="naslov">Welcome</h1> 
+<div class="iff">
+{% if session['user'] %}
+<h1 class="vmes">Back {{ session["user"] }} </h1>
+{% else %}
+<h1 class="vmes">Stranger</h1>
+{% endif %}
+</div>
+{% if session['user'] %}
+<a href="logout">Logout</a>
+<a href="user" class="btn btn-primary">Profil</a>
+<div>
+<form action="/" method="POST">
+<input type="text" name="naslov" >
+<input type="text" name="objavaa" >
+<input type="submit" value="Objavi">
+</div>
+
+<form action="/" method="POST">
+<input type="text" name="search" placeholder="search friend..">
+<br>
+<input type="submit" value="add">
+
+</form>
+
+
+
+{% else %}
+<a href="login" class="btn btn-primary">login</a><br>
+{% endif %}
+<a href="register" class="btn btn-primary">register</a>
+<br>
+<div id="objava">
+{% for post in allinfo %}
+<h1>{{ post }}</h1>
+{% endfor %}
+
+</div>
+{% endblock content %}  
+
+

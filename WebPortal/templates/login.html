@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+
+{% block title %} Login {% endblock %}
+
+{% block content %}
+<div class="blocck">
+<form action="/login" method="post">
+<div class="container" id="loggin">
+<h1>LOGIN</h1>
+<label for="uname"><b>Username</b></label><br>
+<input type="text" placeholder="Enter Username" name="username1" required>
+<br>
+<label for="psw"><b>Password</b></label><br>
+<input type="password" placeholder="Enter Password" name="password1" required><br>
+<button type="submit">Login</button>
+</div>
+</form>
+</div>
+{% endblock content %}
+

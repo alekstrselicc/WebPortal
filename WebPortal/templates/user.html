@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+
+{% block title %} Login {% endblock %}
+
+{% block content %}
+
+<h1>Tole so pa moje objave {{ session['user'] }}</h1>
+{% for post in data %}
+<h2>{{ post }}</h2>
+{% endfor %}
+<h2>moji prijatelji</h2>
+{% for friends in data1 %}
+<h4>{{ friends }}
+{% endfor %}
+
+<br>
+<br>
+<br>
+
+
+
+
+
+
+<a href="/">Home</a>
+
+{% endblock content %}
+

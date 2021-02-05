@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+
+
+{% block title %} {% endblock %}
+
+{% block content %}
+<div class="blocck" id="reg"> 
+<form action='/register' method="POST">
+<h1>Register</h1>
+<label  for="username">Username</label>
+<input type="text" id="username" name="username" placeholder="">
+<label for="password_confirm">Surname</label>
+<input type="text" id="password_confirm" name="sure" placeholder="">
+<label for="email">E-mail</label>
+<input type="text" id="email" name="email" placeholder="">
+<label for="password">Password</label>
+<input type="password" id="password" name="password" placeholder="" >
+
+<button class="btn btn-success">Register</button>  
+</form>
+</div>
+
+{% endblock content %}  
+
