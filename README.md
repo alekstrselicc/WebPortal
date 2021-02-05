@@ -3,6 +3,9 @@
 #instalacija
 pip install mysql-connector-python
 
+#za socketio
+pip install flask-socketio
+
 #instalacija flask
 pip install Flask
 
