@@ -8,6 +8,8 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
+
 
 Route::get('/logs/create', [App\Http\Controllers\LogsController::class, 'create']);
 

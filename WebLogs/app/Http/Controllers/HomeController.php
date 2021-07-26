@@ -10,9 +10,12 @@ class HomeController extends Controller
 {
 
     public function index(){
-        return view("home")->with("logs", Log::all());
-        //return Log::all();
-        //return view("home");
+
+        $logs = Log::all()->sortByDesc("created_at");
+        
+        
+
+        return view("home")->with("logs", $logs);
     }
 
 

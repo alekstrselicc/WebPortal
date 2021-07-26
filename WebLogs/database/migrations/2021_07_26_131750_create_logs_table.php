@@ -15,8 +15,8 @@ class CreateLogsTable extends Migration
     {
         Schema::create('logs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            //$table->unsignedBigInteger('user_id')->nullable();
-            //$table->string("owner")->nullable();
+            $table->unsignedBigInteger('forigenId')->nullable();
+            $table->string("owner")->nullable();
             $table->string("severity")->nullable();
             $table->text("description")->nullable();
             //$table->index('user_id')->nullable();

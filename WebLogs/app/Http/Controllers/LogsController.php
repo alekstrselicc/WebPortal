@@ -19,7 +19,9 @@ class LogsController extends Controller
         
         $data = request()->validate([
                 'Description' => 'required',
-                'severity' => ' required'
+                'severity' => ' required',
+                'owner' => ' required',
+                'forigenId' => ' required'
         ]);
         
         //dd($data);

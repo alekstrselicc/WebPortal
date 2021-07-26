@@ -26,7 +26,8 @@
             <label for="Description" >Description: </label>
                 <input id="Description" type="text" class="form-control @error('Description') is-invalid @enderror" name="Description" value="{{ old('Description') }}" autocomplete="Description" autofocus>
         </div>
-
+            <input type="hidden" name="owner" value="{{Auth::user()->name}}">
+            <input type="hidden" name="forigenId" value="{{Auth::user()->id}}">
         <div class="row pl-3 pt-2">
             <button class="btn btn-primary" >Add log</button>
         </div>
