@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Log;
 use Illuminate\Http\Request;
+use App\Exports\LogsExport;
+use Excel;
+
+use function Symfony\Component\String\b;
 
 class LogsController extends Controller
 {
@@ -39,6 +43,12 @@ class LogsController extends Controller
 
 
     }
+
+    public function exportExcelFile(){
+        return Excel::download(new LogsExport, 'logs.xlsx');
+    }
+
+   
 
 
 }

@@ -16,5 +16,10 @@ class HomeController extends Controller
         return view("home")->with("logs", $logs);
     }
 
+    public function download(){
+
+        return view("downloadPage");
+    }
+
 
 }
