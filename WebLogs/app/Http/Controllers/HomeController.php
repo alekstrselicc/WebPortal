@@ -13,8 +13,6 @@ class HomeController extends Controller
 
         $logs = Log::all()->sortByDesc("created_at");
         
-        
-
         return view("home")->with("logs", $logs);
     }
 

@@ -2,16 +2,43 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <a href="logs/create">Add log</a>
+    <div class="row ml-10">
+
+        <div class="col">
+            <a href="logs/create" class="btn btn-primary">Add log</a>  
+        </div>
+
+        <div class="col-sm-2">
+            
+
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Filter
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="/filtered/low">Low</a>
+                        <a class="dropdown-item" href="/filtered/medium">Medium</a>
+                        <a class="dropdown-item" href="/filtered/high">High</a>
+                    </div>
+                </div>
+        </div>
+
+        <div class="col-xs-10 d-flex">
+        <form action="/searched" method="GET" class="d-flex">
+            <input type="search" class="form-control"/>   
+            <input type="submit" class="btn btn-primary d-flex" value="Search">
+        </form>
+        </div>
+    </div>
+
+        <div class="row mt-2">
             <table class="table">
                 <thead>
                     <tr>
                     <th scope="col">Severity</th>
                     <th scope="col">Description</th>
                     <th scope="col">Time</th>
-                    <th scope="col">Owner</th>
+                    <th scope="col">User</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -25,11 +52,10 @@
                     @endforeach
                 </tbody>
         </table>
-
-
-
-
         </div>
+
+
+
+        
     </div>
-</div>
 @endsection

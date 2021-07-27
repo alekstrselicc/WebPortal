@@ -29,5 +29,16 @@ class LogsController extends Controller
         \App\Models\Log::create($data);
     }
 
- 
+    public function show($id){
+
+        $logs = Log::where("severity", $id)->get();
+    
+        //dd($logs);
+
+        return view("home")->with("logs", $logs);
+
+
+    }
+
+
 }
